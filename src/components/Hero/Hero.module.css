@@ -7,21 +7,6 @@
   overflow: hidden;
 }
 
-/* Декоративные пятна */
-.blob1 {
-  top: -100px;
-  left: -100px;
-  width: 400px;
-  height: 400px;
-}
-
-.blob2 {
-  bottom: -150px;
-  right: -100px;
-  width: 500px;
-  height: 500px;
-}
-
 .inner {
   display: flex;
   flex-direction: column;
@@ -72,8 +57,7 @@
   justify-content: center;
 }
 
-/* ===== Фото ===== */
-/* ===== Фото с декором ===== */
+/* Фото */
 .photoWrap {
   position: relative;
   display: flex;
@@ -207,47 +191,50 @@
   font-size: 0.9rem;
   font-family: var(--font-title);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  animation: float 3s ease-in-out infinite;
 }
 
+/* Отдельно задаём позиционирование и анимацию */
 .iconReact {
   top: 10px;
   left: 50%;
-  transform: translateX(-50%);
+  margin-left: -22px; /* половина ширины */
   color: #61dafb;
-  animation-delay: 0s;
+  animation: float 3s ease-in-out infinite;
 }
 
 .iconJs {
   top: 50%;
   right: -10px;
-  transform: translateY(-50%);
+  margin-top: -22px;
   color: #f7df1e;
+  animation: float 3s ease-in-out infinite;
   animation-delay: 0.8s;
 }
 
 .iconTs {
   bottom: 10px;
   left: 50%;
-  transform: translateX(-50%);
+  margin-left: -22px;
   color: #3178c6;
+  animation: float 3s ease-in-out infinite;
   animation-delay: 1.6s;
 }
 
 .iconCss {
   top: 50%;
   left: -10px;
-  transform: translateY(-50%);
+  margin-top: -22px;
   color: #2965f1;
+  animation: float 3s ease-in-out infinite;
   animation-delay: 2.4s;
 }
 
 @keyframes float {
   0%, 100% {
-    margin-top: 0;
+    transform: translateY(0);
   }
   50% {
-    margin-top: -8px;
+    transform: translateY(-8px);
   }
 }
 

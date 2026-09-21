@@ -153,3 +153,35 @@ img {
 .blob--cyan {
   background: #06b6d4;
 }
+
+/* Глобальный контейнер для пятен — фиксируется на фоне */
+.bg-blobs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Первое пятно — сверху слева */
+.bg-blob-1 {
+  top: -150px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+}
+
+/* Второе пятно — снизу справа */
+.bg-blob-2 {
+  bottom: -200px;
+  right: -150px;
+  width: 600px;
+  height: 600px;
+}
+
+/* Контент должен быть выше пятен */
+header,
+main {
+  position: relative;
+  z-index: 1;
+}

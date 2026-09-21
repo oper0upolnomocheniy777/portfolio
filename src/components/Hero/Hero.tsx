@@ -9,9 +9,6 @@ export const Hero = () => {
 
   return (
     <section id="hero" className={styles.hero}>
-      {/* Декоративные пятна на фоне */}
-      <div className={`blob blob--purple ${styles.blob1}`} />
-      <div className={`blob blob--cyan ${styles.blob2}`} />
 
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
@@ -25,8 +22,8 @@ export const Hero = () => {
           <p className={styles.text}>
             Выпускница ЮФУ по направлению «Фундаментальная информатика
             и информационные технологии». Делаю сайты и веб-приложения,
-            люблю превращать макеты в живые интерфейсы и разбираться
-            в новых технологиях.
+            люблю превращать макеты в живые интерфейсы и изучать 
+            новые технологии.
           </p>
 
           <div className={styles.buttons}>
