@@ -14,10 +14,8 @@ export const Hero = () => {
         <div className={styles.content}>
           <span className={styles.greeting}>Привет, я Ксения 👋</span>
 
-          <h1 className={styles.title}>
-            Frontend-разработчик из{' '}
-            <span className="gradient-text">Таганрога</span>
-          </h1>
+          <h1 className={styles.title}>Frontend-разработчик</h1>
+          <p className={styles.location}>г. Таганрог</p>
 
           <p className={styles.text}>
             Выпускница ЮФУ по направлению «Фундаментальная информатика
@@ -48,7 +46,7 @@ export const Hero = () => {
           {/* Фото */}
           <img
             src="/photo.png"
-            alt="Ксения Брославцева"
+            alt="Фото"
             className={styles.photo}
           />
 

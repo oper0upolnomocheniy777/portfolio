@@ -8,24 +8,44 @@ export const Header = () => {
   const [activeSection, setActiveSection] = useState('hero');
 
   // Меняем фон шапки при скролле + следим за активной секцией
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+// Отслеживаем скролл: меняем фон шапки + определяем активную секцию
+useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 20);
 
-      const scrollPos = window.scrollY + 100;
-      for (const item of navItems) {
-        const el = document.getElementById(item.id);
-        if (!el) continue;
+    // Активная секция — та, что ближе всего к центру экрана
+    const screenCenter = window.innerHeight / 2;
+    let currentSection = navItems[0].id;
 
-        if (scrollPos >= el.offsetTop && scrollPos < el.offsetTop + el.offsetHeight) {
-          setActiveSection(item.id);
-        }
+    for (const item of navItems) {
+      const el = document.getElementById(item.id);
+      if (!el) continue;
+
+      const rect = el.getBoundingClientRect();
+
+      // Если секция пересекает центр экрана — она активна
+      if (rect.top <= screenCenter && rect.bottom >= screenCenter) {
+        currentSection = item.id;
+        break;
       }
-    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      // Если центр экрана выше секции — значит, мы её ещё не прошли
+      if (rect.top > screenCenter) {
+        break;
+      }
+
+      // Иначе — секция уже пройдена, запоминаем её как текущую
+      currentSection = item.id;
+    }
+
+    setActiveSection(currentSection);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // вызываем сразу при загрузке
+
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
 
   // Скрываем скролл, когда открыто мобильное меню
   useEffect(() => {
@@ -35,11 +55,16 @@ export const Header = () => {
     };
   }, [menuOpen]);
 
-  const goToSection = (id: string) => {
-    setMenuOpen(false);
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
+ const goToSection = (id: string) => {
+  setMenuOpen(false);
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  const headerHeight = 72; // высота шапки (--navbar-height)
+  const y = el.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+  window.scrollTo({ top: y, behavior: 'smooth' });
+};
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>

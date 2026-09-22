@@ -1,0 +1,73 @@
+.groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* Группа */
+.group {
+  padding: 28px;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.group:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.groupTitle {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Точка-акцент перед названием группы */
+.groupTitle::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gradient);
+}
+
+/* Теги */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background-color: var(--color-bg-second);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  cursor: default;
+}
+
+.tag:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(124, 58, 237, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Планшет и десктоп */
+@media (min-width: 900px) {
+  .groups {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
