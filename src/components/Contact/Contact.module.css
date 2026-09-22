@@ -1,0 +1,75 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Карточка контакта */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px;
+  padding-bottom: 60px; 
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+  color: inherit;
+  height: 100%;
+  min-height: 160px; 
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(124, 58, 237, 0.25);
+}
+
+.card:active {
+  transform: translateY(-1px);
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--color-text-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  word-break: break-word;
+  min-height: 3.2em;
+}
+
+.hint {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 24px;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.card:hover .hint {
+  color: var(--color-accent);
+}
+
+/* Планшет и десктоп */
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
