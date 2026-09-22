@@ -1,0 +1,110 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+/* Карточка */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.25);
+}
+
+/* Картинка */
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--color-bg-second);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+/* Тело карточки */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  flex: 1;
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--color-text-gray);
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* Теги технологий */
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Ссылки */
+.links {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.link:hover {
+  color: var(--color-accent);
+  transform: translateX(3px);
+}
+
+/* Планшет и десктоп */
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}

@@ -12,18 +12,11 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'Сайт о родном городе',
+    title: 'Поиск фильмов',
     description:
-      'Многостраничный сайт про Таганрог: история, достопримечательности, маршруты. Семантическая вёрстка, адаптивность, базовый JavaScript.',
-    image: '/projects/city-site.png',
-    tech: ['HTML', 'CSS', 'JavaScript'],
-  },
-  {
-    id: 3,
-    title: 'Прототип музыкального сервиса',
-    description:
-      'Дизайн-концепт сайта для поиска музыки. Спроектированы экраны поиска, плейлиста и карточек исполнителей.',
-    image: '/projects/music-app.png',
-    tech: ['Photoshop', 'UI/UX'],
+      'SPA-приложение для поиска фильмов через API Кинопоиска. Авторизация, защищённые маршруты, сохранение сессии в localStorage, адаптивный интерфейс с анимациями.',
+    image: '/projects/js-simple-page.png',
+    tech: ['React', 'TypeScript', 'Redux Toolkit', 'SCSS', 'Webpack'],
+    codeLink: 'https://github.com/oper0upolnomocheniy777/js-simple-page',
   },
 ];
