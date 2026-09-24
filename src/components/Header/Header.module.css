@@ -93,7 +93,7 @@
 
 /* Кнопка справа */
 .cta {
-  display: none;
+  display: none !important;
   padding: 10px 22px;
   font-size: 0.9rem;
 }
@@ -169,8 +169,8 @@
     display: block;
   }
 
-  .cta {
-    display: inline-flex;
+   .cta {
+    display: inline-flex !important;
   }
 
   .burger {

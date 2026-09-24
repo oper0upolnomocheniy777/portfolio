@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   padding: calc(var(--navbar-height) + 60px) 20px 80px;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .inner {
@@ -68,6 +68,7 @@
 
 /* Фото */
 .photoWrap {
+  max-width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -186,6 +187,7 @@
 
 /* Иконки технологий */
 .techIcon {
+  max-width: 100%;
   position: absolute;
   display: flex;
   align-items: center;
