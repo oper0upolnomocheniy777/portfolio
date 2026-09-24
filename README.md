@@ -1,32 +1,102 @@
-# React + TypeScript + Vite
+# Личное портфолио
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Личный сайт-визитка фронтенд-разработчика. Одностраничное приложение (SPA) с навигацией по секциям и анимациями.
 
-Currently, two official plugins are available:
+🔗 **Живая версия:** [portfolio-strekoza.vercel.app](https://portfolio-strekoza.vercel.app/) 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Возможности
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📱 **Адаптивная вёрстка** — от мобильного до десктопа
+- 🎨 **Тёмная тема** с градиентными акцентами
+- 🧭 **Навигация по секциям** с плавным скроллом
+- 🎯 **Активная секция** подсвечивается при скролле
+- 📋 **Контакты с копированием** — Email и Telegram копируются в буфер
+- 🖼 **Секция проектов** с карточками и тегами технологий
+- 📝 **Навыки** сгруппированы по уровням (Уверенно / Работала / Знакома)
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🛠️ Технологии
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+**Frontend:**
+- React 18
+- TypeScript
+- Vite
+- CSS Modules
+- React Hooks (useState, useEffect)
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+**Инструменты:**
+- Git / GitHub
+- Vercel (деплой)
+
+---
+
+## 📁 Структура проекта
+
+portfolio/
+├── public/
+│   ├── photo.jpg              # Фото для Hero
+│   ├── resume.pdf             # Резюме для скачивания
+│   └── projects/              # Скриншоты проектов
+│       ├── tour-constructor.png
+│       └── js-simple-page.png
+├── src/
+│   ├── components/
+│   │   ├── Header/            # Шапка с навигацией и бургер-меню
+│   │   ├── Hero/              # Главная секция с фото
+│   │   ├── About/             # Обо мне
+│   │   ├── Skills/            # Навыки по группам
+│   │   ├── Projects/          # Карточки проектов
+│   │   ├── Contact/           # Контакты с копированием
+│   │   └── Footer/            # Подвал
+│   ├── data/                  # Данные (навыки, проекты, навигация)
+│   ├── types/                 # TypeScript типы
+│   ├── styles/
+│   │   └── global.css         # Глобальные стили и CSS-переменные
+│   ├── App.tsx
+│   └── main.tsx
+├── package.json
+└── vite.config.ts
+
+---
+
+## 🚀 Запуск локально
+
+**Клонировать репозиторий**
+
+git clone https://github.com/oper0upolnomocheniy777/portfolio
+
+cd portfolio
+
+**Установить зависимости**
+
+npm install
+
+**Запустить dev-сервер**
+
+npm run dev
+
+Откройте `http://localhost:5173` — сайт запустится с горячей перезагрузкой.
+
+---
+
+## 📦 Сборка
+
+**Собрать оптимизированную версию**
+
+npm run build
+
+**Посмотреть, как будет выглядеть собранная версия**
+
+npm run preview
+
+---
+
+## 👩‍💻 Автор
+
+**Брославцева Ксения Сергеевна**
+
+
+
