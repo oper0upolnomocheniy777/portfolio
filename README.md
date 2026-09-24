@@ -33,8 +33,10 @@
 
 ---
 
-## 📁 Структура проекта
+---
 
+## 📁 Структура проекта
+```
 portfolio/
 ├── public/
 │   ├── photo.jpg              # Фото для Hero
@@ -59,25 +61,24 @@ portfolio/
 │   └── main.tsx
 ├── package.json
 └── vite.config.ts
-
+```
 ---
 
 ## 🚀 Запуск локально
 
 **Клонировать репозиторий**
-
+```
 git clone https://github.com/oper0upolnomocheniy777/portfolio
-
 cd portfolio
-
+```
 **Установить зависимости**
-
+```
 npm install
-
+```
 **Запустить dev-сервер**
-
+```
 npm run dev
-
+```
 Откройте `http://localhost:5173` — сайт запустится с горячей перезагрузкой.
 
 ---
@@ -85,13 +86,13 @@ npm run dev
 ## 📦 Сборка
 
 **Собрать оптимизированную версию**
-
+```
 npm run build
-
+```
 **Посмотреть, как будет выглядеть собранная версия**
-
+```
 npm run preview
-
+```
 ---
 
 ## 👩‍💻 Автор
