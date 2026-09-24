@@ -3,6 +3,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: calc(var(--navbar-height) + 60px) 20px 80px;
   overflow: clip;
 }
@@ -14,6 +15,9 @@
   gap: 60px;
   position: relative;
   z-index: 1;
+  width: 100%; 
+  max-width: var(--container); 
+  margin: 0 auto;
 }
 
 /* Текстовая часть */
